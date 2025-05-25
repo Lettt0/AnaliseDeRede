@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Análise de Tráfego de Rede - UniFECAF</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <style>
+        :root {
+            --primary-color: #4e73df;
+            --secondary-color: #1cc88a;
+            --dark-color: #5a5c69;
+        }
+        
+        body {
+            background-color: #f8f9fc;
+            font-family: 'Nunito', -apple-system, BlinkMacSystemFont, sans-serif;
+            color: #333;
+        }
+        
+        .hero-section {
+            background: linear-gradient(135deg, var(--primary-color) 0%, #224abe 100%);
+            color: white;
+            padding: 5rem 0;
+            margin-bottom: 3rem;
+            border-radius: 0 0 1rem 1rem;
+        }
+        
+        .feature-card {
+            transition: transform 0.3s;
+            border: none;
+            border-radius: 0.5rem;
+            box-shadow: 0 0.15rem 1.75rem 0 rgba(58, 59, 69, 0.1);
+            height: 100%;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 0.5rem 1.5rem 0 rgba(58, 59, 69, 0.2);
+        }
+        
+        .feature-icon {
+            width: 4rem;
+            height: 4rem;
+            border-radius: 50%;
+            background-color: var(--primary-color);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            font-size: 1.5rem;
+        }
+        
+        .screenshot {
+            border-radius: 0.5rem;
+            box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+            margin-bottom: 1.5rem;
+        }
+        
+        .screenshot:hover {
+            transform: scale(1.02);
+        }
+        
+        .tech-badge {
+            font-size: 0.9rem;
+            padding: 0.5em 0.8em;
+            margin-right: 0.5rem;
+            margin-bottom: 0.5rem;
+            background-color: #e9ecef;
+            color: #495057;
+        }
+        
+        .btn-demo {
+            background-color: var(--secondary-color);
+            color: white;
+            padding: 0.75rem 1.5rem;
+            font-weight: 600;
+        }
+        
+        .btn-demo:hover {
+            background-color: #17a673;
+            color: white;
+        }
+        
+        .section-title {
+            position: relative;
+            margin-bottom: 2.5rem;
+            color: var(--primary-color);
+        }
+        
+        .section-title:after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -10px;
+            width: 50px;
+            height: 3px;
+            background-color: var(--secondary-color);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navegação -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#">
+                <i class="bi bi-hdd-network me-2"></i>Análise de Rede
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#features">Recursos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#screenshots">Visualizações</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">Sobre</a>
+                    </li>
+                </ul>
+                <a href="#demo" class="btn btn-demo ms-lg-3">Ver Demonstração</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section text-center">
+        <div class="container">
+            <h1 class="display-4 fw-bold mb-4">Análise Avançada de Tráfego de Rede</h1>
+            <p class="lead mb-5">Uma solução completa para monitoramento, análise e otimização de redes de computadores com visualizações interativas e relatórios detalhados.</p>
+            <div class="d-flex justify-content-center gap-3">
+                <a href="#demo" class="btn btn-light btn-lg px-4">Experimentar</a>
+                <a href="#features" class="btn btn-outline-light btn-lg px-4">Saiba Mais</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Recursos -->
+    <section id="features" class="py-5">
+        <div class="container">
+            <h2 class="text-center section-title">Principais Recursos</h2>
+            
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="feature-card card p-4 text-center">
+                        <div class="feature-icon">
+                            <i class="bi bi-graph-up"></i>
+                        </div>
+                        <h3>Monitoramento em Tempo Real</h3>
+                        <p>Capture e analise pacotes de rede em tempo real com métricas detalhadas sobre tráfego, protocolos e dispositivos.</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="feature-card card p-4 text-center">
+                        <div class="feature-icon" style="background-color: #1cc88a;">
+                            <i class="bi bi-diagram-3"></i>
+                        </div>
+                        <h3>Visualização de Topologia</h3>
+                        <p>Mapas interativos da rede mostrando conexões entre dispositivos e padrões de comunicação.</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="feature-card card p-4 text-center">
+                        <div class="feature-icon" style="background-color: #f6c23e;">
+                            <i class="bi bi-file-earmark-pdf"></i>
+                        </div>
+                        <h3>Relatórios PDF</h3>
+                        <p>Geração automática de relatórios em PDF com gráficos profissionais e análises estatísticas.</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="feature-card card p-4 text-center">
+                        <div class="feature-icon" style="background-color: #36b9cc;">
+                            <i class="bi bi-calculator"></i>
+                        </div>
+                        <h3>Análise Matemática</h3>
+                        <p>Cálculos avançados incluindo derivadas, PCA e entropia para detecção de anomalias.</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="feature-card card p-4 text-center">
+                        <div class="feature-icon" style="background-color: #e74a3b;">
+                            <i class="bi bi-activity"></i>
+                        </div>
+                        <h3>Métricas de Desempenho</h3>
+                        <p>Medição de throughput, latência e eficiência da rede com gráficos temporais.</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="feature-card card p-4 text-center">
+                        <div class="feature-icon" style="background-color: #858796;">
+                            <i class="bi bi-shuffle"></i>
+                        </div>
+                        <h3>Otimização</h3>
+                        <p>Ferramentas para balanceamento de carga e alocação ideal de recursos de rede.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Screenshots -->
+    <section id="screenshots" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center section-title">Visualizações</h2>
+            
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4">
+                    <img src="https://via.placeholder.com/600x400/4e73df/ffffff?text=Gráfico+de+Tráfego" alt="Gráfico de Tráfego" class="img-fluid screenshot">
+                    <h4 class="text-center">Análise de Tráfego</h4>
+                    <p class="text-center">Visualização temporal do volume de dados transmitidos.</p>
+                </div>
+                
+                <div class="col-md-6 col-lg-4">
+                    <img src="https://via.placeholder.com/600x400/1cc88a/ffffff?text=Topologia+de+Rede" alt="Topologia de Rede" class="img-fluid screenshot">
+                    <h4 class="text-center">Topologia de Rede</h4>
+                    <p class="text-center">Mapa de conexões entre dispositivos na rede.</p>
+                </div>
+                
+                <div class="col-md-6 col-lg-4">
+                    <img src="https://via.placeholder.com/600x400/36b9cc/ffffff?text=Distribuição+de+Protocolos" alt="Distribuição de Protocolos" class="img-fluid screenshot">
+                    <h4 class="text-center">Protocolos de Rede</h4>
+                    <p class="text-center">Análise da distribuição de TCP, UDP e outros protocolos.</p>
+                </div>
+                
+                <div class="col-md-6 col-lg-4">
+                    <img src="https://via.placeholder.com/600x400/f6c23e/ffffff?text=Análise+PCA" alt="Análise PCA" class="img-fluid screenshot">
+                    <h4 class="text-center">Análise PCA</h4>
+                    <p class="text-center">Redução de dimensionalidade para detecção de padrões.</p>
+                </div>
+                
+                <div class="col-md-6 col-lg-4">
+                    <img src="https://via.placeholder.com/600x400/e74a3b/ffffff?text=Gráfico+Polar" alt="Gráfico Polar" class="img-fluid screenshot">
+                    <h4 class="text-center">Distribuição por IP</h4>
+                    <p class="text-center">Visualização polar do tráfego por endereço IP.</p>
+                </div>
+                
+                <div class="col-md-6 col-lg-4">
+                    <img src="https://via.placeholder.com/600x400/858796/ffffff?text=Relatório+PDF" alt="Relatório PDF" class="img-fluid screenshot">
+                    <h4 class="text-center">Relatório Completo</h4>
+                    <p class="text-center">Exportação profissional em PDF com todas as análises.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Demonstração -->
+    <section id="demo" class="py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <h2 class="section-title">Experimente Agora</h2>
+                    <p class="lead">Teste nossa ferramenta de análise de tráfego diretamente no seu navegador.</p>
+                    <p>Configure a captura de pacotes, visualize os resultados em tempo real e gere relatórios completos com um clique.</p>
+                    <a href="/" class="btn btn-primary btn-lg mt-3">Acessar Demonstração</a>
+                </div>
+                <div class="col-lg-6">
+                    <img src="https://via.placeholder.com/600x400/4e73df/ffffff?text=Interface+Web" alt="Interface Web" class="img-fluid rounded">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sobre o Projeto -->
+    <section id="about" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center section-title">Sobre o Projeto</h2>
+            
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center">
+                    <p class="lead">Este projeto foi desenvolvido como parte do curso de Ciência da Computação na UniFECAF, combinando conceitos avançados de redes de computadores, matemática aplicada e visualização de dados.</p>
+                    
+                    <div class="my-4">
+                        <h5>Tecnologias Utilizadas</h5>
+                        <div class="d-flex flex-wrap justify-content-center">
+                            <span class="tech-badge"><i class="bi bi-filetype-py me-1"></i>Python</span>
+                            <span class="tech-badge"><i class="bi bi-filetype-js me-1"></i>JavaScript</span>
+                            <span class="tech-badge"><i class="bi bi-filetype-html me-1"></i>HTML/CSS</span>
+                            <span class="tech-badge"><i class="bi bi-github me-1"></i>Flask</span>
+                            <span class="tech-badge"><i class="bi bi-database me-1"></i>Pandas</span>
+                            <span class="tech-badge"><i class="bi bi-graph-up me-1"></i>Matplotlib</span>
+                            <span class="tech-badge"><i class="bi bi-shuffle me-1"></i>NetworkX</span>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-5">
+                        <h5>Desenvolvido por</h5>
+                        <p>Equipe de Análise de Redes - UniFECAF</p>
+                        <p class="text-muted">© 2023 Todos os direitos reservados</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-dark text-white py-4">
+        <div class="container text-center">
+            <p class="mb-0">Projeto para análise de tráfego de redes - UniFECAF</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>a
